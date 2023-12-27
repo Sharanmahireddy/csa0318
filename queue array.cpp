@@ -1,4 +1,4 @@
-#include <stdio.h>
+  #include <stdio.h>
 #define MAX 30
 void insert_queue();
 void delete_queue();
@@ -35,12 +35,10 @@ int main()
 void insert_queue()
 {
     int add_item;
-    if (rear == MAX - 1)
+    if (rear > MAX - 1)
     printf("QUEUE OVERFLOW \n");
     else
     {
-        if (front == - 1)
-        front = 0;
         printf("Enter value to inset in queue : ");
         scanf("%d", &add_item);
         rear = rear + 1;
@@ -49,7 +47,7 @@ void insert_queue()
 } 
 void delete_queue()
 {
-    if (front == - 1 || front > rear)
+    if (front < -1)
     {
         printf("QUEUE UNDERFLOW \n");
         return ;
@@ -63,7 +61,7 @@ void delete_queue()
 void display_queue()
 {
     int i;
-    if (front == - 1)
+    if (front == rear)
         printf("EMPTY QUEUE \n");
     else
     {
