@@ -30,7 +30,7 @@ int main()
 	printf("array before sorting:\n");
 	for (int i=0;i<n;i++)
 		{
-		   printf("%d ",a[i];
+		   printf("%d ",arr[i];
 		}
 	insertionSort(arr, n);
 	printArray(arr, n);
